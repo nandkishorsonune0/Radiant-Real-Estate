@@ -1,0 +1,198 @@
+body {
+    margin-right: 20px;
+    margin-left: 10px; /* Added margin to the left */
+}
+
+.frontPage {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20px); 
+    height: 600px;
+    margin-left: 10px; /* Ensures 10px distance from the left */
+    margin-right: 10px; /* Ensures 10px distance from the right */
+}
+
+.frontPage-description {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-left: 3%;
+    padding-top: 13%;
+    z-index: 1;
+    width: 47%;
+    height: 120%;
+    background-color: white;
+    
+}
+
+.frontPage-description-title {
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+    padding-right: 3%;
+}
+
+.frontPage-description-title>span {
+    color: #00b98d;
+}
+
+.frontPage-description-text {
+    font-family: Inter, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    width: 90%;
+}
+
+.frontPage-description-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 10em;
+    height: 3em;
+    border: 2px #00b98d solid;
+    border-radius: 10px;
+    background-color: #00b98d;
+    font-family: Inter, sans-serif;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.frontPage-description-button:hover {
+    background-color: #33c7a5;
+    box-shadow: 0 0 15px #00b98d;
+}
+
+.frontpage-images-container {
+    position: absolute;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    z-index: -2;
+    height: 700px;
+    
+   
+   
+}
+
+.frontpage-images {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+}
+
+.frontpage-image {
+    min-width: 50%;
+    min-height: 59em;
+}
+
+.frontpage-button-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    top: -30%;
+    left: 95%;
+    width: 4em;
+    
+}
+
+.frontpage-button {
+    position: relative;
+    font-size: 24px; /* Reduced font size */
+    cursor: pointer;
+    z-index: 2;
+    border: #00b98d 1px solid;
+    border-radius: 40px; /* Reduced border-radius for a smaller button */
+    background-color: #00b98d;
+    margin-top: 5px;
+    padding: 0.25em 0.5em; /* Adjusted padding for a smaller button */
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.frontpage-button:hover {
+    background-color: #0e2e50;
+    border-color: #0e2e50;
+}
+
+
+@media screen and (max-width: 1168px) {
+    .frontPage {
+        flex-direction: column;
+        height: 1000px;
+        margin-left: 10px; /* Ensures 10px distance from the left */
+        margin-right: 10px; /* Ensures 10px distance from the right */
+    }
+
+    .frontPage-description {
+        width: calc(100% - 20px); /* Adjusted width to account for the margins */
+        height: 15em;
+        padding: 5% 1%;
+        padding-top: 15%;
+        z-index: 0;
+        background-color: rgba(255,255,255,0.9);
+    }
+
+    .frontPage-description-title {
+        font-size: 2.5em;
+    }
+
+    .frontPage-description-text {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .frontPage-description-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 8em; /* Adjusted width for a smaller button */
+        height: 2.5em; /* Adjusted height for a smaller button */
+        border: 2px #00b98d solid;
+        border-radius: 8px; /* Reduced border-radius for a smaller button */
+        background-color: #00b98d;
+        font-family: Inter, sans-serif;
+        font-size: 1.2em; /* Reduced font-size */
+        color: white;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        margin-left: 35%; /* Keep this if you need specific positioning */
+        padding: 0.5rem 1rem; /* Adjusted padding for a smaller button */
+    }
+    
+    .frontPage-description-button:hover {
+        background-color: #33c7a5;
+        box-shadow: 0 0 10px #00b98d; /* Adjusted shadow for a smaller button */
+    }
+    
+
+    .frontpage-images-container {
+        height: auto;
+        position: relative;
+        margin-left: 10px; /* Ensures 10px distance from the left */
+        margin-right: 10px; /* Ensures 10px distance from the right */
+    }
+
+    .frontpage-images {
+        flex-direction: row;
+    }
+
+    .frontpage-image {
+        min-width: 100%;
+        padding-top: 20%;
+    }
+
+    .frontpage-button-container {
+        position: relative;
+        flex-direction: column;
+        top: 20rem;
+        left: 1rem;
+        z-index: 15;
+        margin-top: 1em;
+    }
+}

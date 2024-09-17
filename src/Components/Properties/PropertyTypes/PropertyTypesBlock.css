@@ -1,0 +1,108 @@
+.propertyTypesBlock {
+    margin-top: 100px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .propertyTypesBlock-text {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3em;
+    animation: slideIn 1.5s ease-out;
+    text-align: center;
+  }
+  
+  .propertyTypesBlock-text > h3 {
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+  
+  .propertyTypesBlock-text > p {
+    width: 80%; 
+  }
+  
+  .propertyTypesBlock-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  
+  .propertyTypesBlock-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: dashed #c7e8dd 1px;
+    border-radius: 15px;
+    width: 20em;
+    height: 12em;
+    margin: 1em;
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    animation: slideFromBottom 1.5s ease-out;
+  }
+  
+  .propertyTypesBlock-card:hover {
+    background-color: #00b98d;
+    border-color: transparent;
+  }
+  
+  .propertyTypesBlock-card > div {
+    border: dashed #24b48d 1px;
+    border-radius: 50px;
+    padding: 0.8em;
+    margin: none;
+    background-color: white;
+    width: fit-content;
+  }
+  
+  .propertyTypesBlock-card:hover > div {
+    background-color: white;
+  }
+  
+  .propertyTypesBlock-card-name {
+    margin: 0px;
+    padding: 0.5em;
+    color: #0e2e50;
+    font-weight: bold;
+    transition-duration: 0.5s;
+  }
+  
+  .propertyTypesBlock-card:hover .propertyTypesBlock-card-name {
+    color: white;
+  }
+  
+  .propertyTypesBlock-card-amount {
+    color: #00ba8d;
+    margin: 0px;
+    transition-duration: 0.5s;
+  }
+  
+  .propertyTypesBlock-card:hover .propertyTypesBlock-card-amount {
+    color: white;
+  }
+  
+  @media screen and (max-width: 1168px) {
+    .propertyTypesBlock-text {
+      margin-top: 2em;
+    }
+  
+    .propertyTypesBlock-cards {
+      margin-top: 1em;
+      margin-right: 2%; 
+      margin-left: 2%; 
+    }
+  }
+  

@@ -1,0 +1,265 @@
+/* Container for property posts */
+.propertyListing-posts {
+    position: relative;
+    z-index: 15;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three cards in one row */
+    gap: 70px; /* Adjust gap between cards */
+    margin: 2% 10%; /* Adjusted margin for better spacing */
+    width: 1150px; /* Let the container adjust dynamically */
+    height: auto;
+}
+
+/* Styling for individual property post */
+.propertyListing-post {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff; /* Background color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+/* .propertyListing-post:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+} */
+
+/* Property listing about section */
+.propertyListing-about {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Align children to the left */
+    padding-top: 9%;
+    margin: 0 2.5%;
+    margin-left: 20px;
+}
+
+.propertyListing-about-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add space below the text */
+    margin-left: 20px;
+    align-items: center;
+}
+
+.propertyListing-about-text > h3 {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    font-size: 4em;
+}
+
+.propertyListing-about-text > p {
+    font-family: 'Inter', sans-serif;
+    color: #666565;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+.propertyListing-about-nav-button {
+    padding: 15px 45px;
+    margin:0 95px; /* Remove right margin for left alignment */
+   
+    background-color: white;
+    border: 1px solid #00b98d;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 0 transparent;
+}
+
+.propertyListing-about-nav-button:hover {
+    background-color: #e9f5f3;
+    box-shadow: 0 0 15px rgba(0, 185, 141, 0.4);
+}
+
+.active {
+    box-shadow: 0 0 15px #00b98d;
+    background-color: #00b98d;
+    color: white;
+}
+
+/* Property listing post header */
+.propertyListing-post-header {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Fixed height for image */
+}
+
+.propertyListing-post-header-status {
+    position: absolute;
+    background-color: #00b98d;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    top: 10px; /* Moved inside the card */
+    left: 10px;
+    font-size: 13px;
+    z-index: 10;
+}
+
+.propertyListing-post-header-photo {
+    width: 100%;
+    height: 110%;
+    object-fit: cover; /* Ensures the image covers the space and maintains aspect ratio */
+    transition: transform 0.7s ease-in-out;
+}
+
+.propertyListing-post-header-photo:hover {
+    transform: scale(1.1);
+}
+
+.propertyListing-post-header-type {
+    position: absolute;
+    background-color: white;
+    color: #00b98d;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    bottom: 10px; /* Move to the bottom */
+    left: 10px;   /* Align it to the left */
+    font-size: 14px;
+    z-index: 10;
+}
+
+
+/* Main content of property listing post */
+.propertyListing-post-main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5%;
+}
+
+.propertyListing-post-main-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: 0.5em 0;
+    color: #00b98d;
+}
+
+.propertyListing-post-main-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.6em;
+    margin: 0;
+    color: #333;
+}
+
+.propertyListing-post-main-location {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color: #666565;
+    margin-top: 0.5em;
+}
+
+.post-main-gpsIcon {
+    width: 20px;
+    padding-right: 10px;
+}
+
+/* Property listing post footer */
+.propertyListing-post-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5%;
+    border-top: 1px solid #eee;
+}
+
+.propertyListing-post-footerPart {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #666;
+}
+
+.propertyListing-post-footerPart > img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.propertyListing-browseMore {
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #00b98d;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border: 1.5px solid #00b98d;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px auto; /* Center horizontally */
+    display: block; /* Ensure block-level element for centering */
+    text-align: center; /* Ensure text inside is centered */
+}
+
+.propertyListing-browseMore:hover {
+    box-shadow: 0 0 15px #00b98d;
+    background-color: #00b98d;
+    color: white;
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container to ensure centering at the bottom */
+.propertyListing-browseMore-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 40px;
+    padding-bottom: 40px; /* Add padding for some space above the bottom */
+}
+
+
+/* Keyframe animation for slide effect */
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .propertyListing-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .propertyListing-posts {
+        grid-template-columns: 1fr;
+    }
+
+    .propertyListing-about {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
